@@ -4,6 +4,7 @@ import ThemeContext from './context/ThemeContext'
 import LoginForm from './components/LoginForm'
 import ProtectedRoute from './components/ProtectedRoute'
 import Home from './components/Home'
+import Trending from './components/Trending'
 import './App.css'
 
 class App extends Component {
@@ -25,6 +26,7 @@ class App extends Component {
         <Switch>
           <Route exact path="/login" component={LoginForm} />
           <ProtectedRoute exact path="/" component={Home} />
+          <ProtectedRoute exact path="/trending" component={Trending} />
         </Switch>
       </ThemeContext.Provider>
     )
